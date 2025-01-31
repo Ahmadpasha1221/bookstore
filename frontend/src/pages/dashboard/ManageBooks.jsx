@@ -12,7 +12,7 @@ const ManageBooks = () => {
 
   const [deleteBook] = useDeleteABookMutation();
 
-  // Handle deleting a book
+  
   const handleDeleteBook = async (id) => {
     try {
       await deleteBook(id).unwrap();
@@ -24,7 +24,6 @@ const ManageBooks = () => {
     }
   };
 
-  // Handle navigating to Edit Book page
   const handleEditClick = (id) => {
     navigate(`dashboard/edit-book/${id}`);
   };

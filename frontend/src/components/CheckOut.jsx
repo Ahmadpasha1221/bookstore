@@ -25,8 +25,8 @@ const CheckOut = () => {
     state: "",
     zipcode: "",
     billing_same: false,
-    productIds: productIds, // Added productIds
-    totalPrice: totalPrice, // Added totalPrice
+    productIds: productIds,  
+    totalPrice: totalPrice, 
   });
 
   const [errors, setErrors] = useState({
@@ -106,7 +106,6 @@ const CheckOut = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Form Data Submitted: ", formData);
     }
     try {
       await postOrder(formData).unwrap();

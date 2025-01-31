@@ -26,7 +26,7 @@ const AdminLogin = () => {
     if (Object.keys(validationErrors).length > 0) return;
 
     try {
-      // Make the API call to authenticate the admin
+      
       const response = await axios.post(
         "http://localhost:3000/api/auth/admin",
         { username, password },
@@ -39,15 +39,11 @@ const AdminLogin = () => {
       );
 
       const auth = response.data;
-      console.log(auth);
-
-      // Handle successful login
-      console.log(auth.success);
 
       if (auth.success) {
         localStorage.setItem("token", auth.token);
         alert("Admin Login successful!");
-        navigate("/dashboard"); // Navigate to the dashboard after successful login
+        navigate("/dashboard"); 
       } else {
         setMessage("Invalid username or password!");
       }

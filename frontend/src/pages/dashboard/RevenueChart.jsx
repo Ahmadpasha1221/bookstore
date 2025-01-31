@@ -1,4 +1,4 @@
-// src/components/RevenueChart.jsx
+
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -11,7 +11,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register Chart.js components
 ChartJS.register(
   CategoryScale,
   LinearScale,

@@ -8,7 +8,7 @@ import RevenueChart from "./RevenueChart";
 const Dashboard = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState({});
-  // console.log(data)
+  
   const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
@@ -21,7 +21,6 @@ const Dashboard = () => {
         });
 
         setData(response.data);
-        console.log(response.data);
 
         setLoading(false);
       } catch (error) {
@@ -31,8 +30,6 @@ const Dashboard = () => {
 
     fetchData();
   }, []);
-
-  // console.log(data)
 
   if (loading) return <Loading />;
 

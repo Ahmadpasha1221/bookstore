@@ -30,11 +30,9 @@ const Register = () => {
         "Password must be 8+ characters, with 1 uppercase, 1 lowercase, and 1 special character"
       );
     } else {
-      setMessage(""); // Clear any existing error message
+      setMessage(""); 
       await registerUser(email, password);
       navigate("/login");
-      console.log("Submitted Email:", email);
-      console.log("Submitted Password:", password);
     }
   };
   return (

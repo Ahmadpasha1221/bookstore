@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom"; // Assumes you're using React Router
+import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRouteForAdmin = ({ children }) => {
   const token = localStorage.getItem("token");

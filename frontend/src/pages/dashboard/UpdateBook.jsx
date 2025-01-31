@@ -65,7 +65,6 @@ const UpdateBook = () => {
     };
 
     try {
-      console.log(updateBookData);
 
       await updateBook({ updateBookData, id }).unwrap();
 

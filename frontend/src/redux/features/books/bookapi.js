@@ -5,7 +5,6 @@ const baseQuery = fetchBaseQuery({
   prepareHeaders: (Headers) => {
     const token = localStorage.getItem("token");
     if (token) {
-      console.log(token);
 
       Headers.set("Authorization", `Bearer ${token}`);
     }
@@ -23,7 +22,6 @@ const booksApi = createApi({
     }),
     fetchSingleBook: builder.query({
       query: (id) => {
-        console.log(`API Query URL: /${id}`);
         return `/${id}`;
       },
       providesTags: (result, error, id) => [{ type: "Books", id }],

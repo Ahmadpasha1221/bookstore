@@ -9,7 +9,7 @@ const orderSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      match: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, // Email regex validation
+      match: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/, 
     },
     phone: {
       type: String,
@@ -50,16 +50,7 @@ const orderSchema = new mongoose.Schema(
       type: Boolean,
       required: true,
     },
-    // Add other fields like total price, cart items, etc., if necessary
-    // Example:
-    // totalPrice: {
-    //   type: Number,
-    //   required: true,
-    // },
-    // cartItems: [{
-    //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: 'CartItem',
-    // }]
+   
   },
   {
     timestamps: true,

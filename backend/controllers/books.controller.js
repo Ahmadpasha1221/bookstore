@@ -29,7 +29,7 @@ const postBooks = async (req, res) => {
 const getAllBooks = async (req, res) => {
   try {
     const books = await Book.find().sort({ createdAt: -1 });
-    console.log(books);
+   
 
     res.status(200).send(books);
   } catch (err) {
@@ -55,17 +55,11 @@ const getABook = async (req, res) => {
 const updateABook = async (req, res) => {
   try {
     const { id } = req.params;
-    console.log(
-      "euuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu",
-      id + " " + req.body
-    );
-    console.dir(req.body, { depth: null });
     if (!id) return res.status(404).send({ message: "Book Not Found" });
 
     const updatedBook = await Book.findByIdAndUpdate(id, req.body, {
       new: true,
     });
-    console.log(updatedBook);
 
     if (!updatedBook)
       return res.status(404).send({ message: "Book Not Found" });

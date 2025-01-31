@@ -18,7 +18,6 @@ const TopSellers = () => {
       : books.filter((item) => {
           return item.category === changeCategory.toLowerCase();
         });
-  console.log(filteredCategoryDetails);
 
   const category = [
     "Choose a genre",

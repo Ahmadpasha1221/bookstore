@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 import BookCard from "../../components/BookCard";
 import { useFetchAllBooksQuery } from "../../redux/features/books/bookapi";
 const Recommended = () => {
-  // const [data, setData] = useState([]);
   const { data: books = [] } = useFetchAllBooksQuery();
  
   return (

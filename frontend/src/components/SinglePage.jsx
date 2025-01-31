@@ -12,10 +12,7 @@ const SinglePage = () => {
     dispatch(addToCart(book));
   };
   const { id } = useParams();
-  console.log(id);
   const { data: book, error, isLoading } = useFetchSingleBookQuery(id);
-  console.log(book);
-  console.log("Query Error:", error);
   if (isLoading) return <Loading />;
   if (error)
     return (

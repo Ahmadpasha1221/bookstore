@@ -7,12 +7,10 @@ dotenv.config();
 router.post("/admin", async (req, res) => {
   try {
     const { username, password } = req.body;
-    console.log(username + "  " + password);
     const admin = await user.findOne({ username });
     if (!admin) {
       return res.status(404).send({ message: "admin not found" });
     }
-    console.log(admin);
     if (admin.password !== password) {
       res.status(401).send({ message: "Invalid password!" });
     }
