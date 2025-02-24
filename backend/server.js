@@ -11,7 +11,7 @@ env.config();
 app.use(express.json());
 const port = process.env.PORT || 8000;
 // app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
-const allowedOrigins = ["https://bookstore-qwdc.onrender.com"];
+const allowedOrigins = ["https://bookstore-8-hxb0.onrender.com"];
 
 const corsOptions = {
   origin: function (origin, callback) {
