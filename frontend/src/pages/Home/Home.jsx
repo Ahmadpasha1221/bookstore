@@ -6,13 +6,13 @@ import News from "./News";
 
 const Home = () => {
   return (
-    <>
+    <div className="">
       <Banner />
       <TopSellers />
       <Recommended />
       <News />
       
-    </>
+    </div>
   );
 };
 

@@ -10,8 +10,22 @@ const adminRoutes = require("./router/amin.route.js");
 env.config();
 app.use(express.json());
 const port = process.env.PORT || 3000;
-app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
+// app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
+const allowedOrigins = ["https://book-store-1-4lt8.onrender.com"];
 
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true, // If you need to include cookies or authentication
+};
+
+app.use(cors(corsOptions));
+app.use("/auth", authRoutes);
 app.use("/api/auth", userRouter);
 app.use("/api/books", booksRouter);
 app.use("/api/orders", ordersRouter);

@@ -1,0 +1,13 @@
+{
+  "name": "organic-beauty",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start-client\"",
+    "start-server": "cd backend && npm start",
+    "start-client": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
