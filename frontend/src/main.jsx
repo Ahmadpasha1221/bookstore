@@ -4,7 +4,7 @@ import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./router/router.jsx";
 import { Provider } from "react-redux";
-import Store from "./redux/store";
+import Store from "./redux/Store.js";
 import "sweetalert2/dist/sweetalert2.js";
 createRoot(document.getElementById("root")).render(
   <Provider store={Store}>
