@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const baseQuery = fetchBaseQuery({
-  baseUrl: "https://bookstore-gd79.onrender.com/api/books",
+  baseUrl: "https://bookstore-3-rlu3.onrender.com/api/books",
   credentials: "include",
   prepareHeaders: (Headers) => {
     const token = localStorage.getItem("token");
