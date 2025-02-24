@@ -41,6 +41,7 @@ const getAllBooks = async (req, res) => {
 const getABook = async (req, res) => {
   try {
     const { id } = req.params;
+    console.log(id);
     if (!id) return res.status(404).send({ message: "book Not Found" });
 
     const book = await Book.findById(id);
