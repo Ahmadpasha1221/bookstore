@@ -9,23 +9,23 @@ const userRouter = require("./router/user.router.js");
 const adminRoutes = require("./router/amin.route.js");
 env.config();
 app.use(express.json());
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
-const allowedOrigins = ["https://glxx-8-4q8s.onrender.com"];
+// const allowedOrigins = ["https://glxx-8-4q8s.onrender.com"];
 
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-  credentials: true, // If you need to include cookies or authentication
-};
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.includes(origin) || !origin) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   credentials: true, // If you need to include cookies or authentication
+// };
 
-app.use(cors(corsOptions));
-app.use("/auth", authRoutes);
+// app.use(cors(corsOptions));
+// app.use("/auth", authRoutes);
 app.use("/api/auth", userRouter);
 app.use("/api/books", booksRouter);
 app.use("/api/orders", ordersRouter);
