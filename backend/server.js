@@ -10,8 +10,8 @@ const adminRoutes = require("./router/amin.route.js");
 env.config();
 app.use(express.json());
 const port = process.env.PORT || 3000;
-// app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
-const allowedOrigins = ["https://book-store-1-4lt8.onrender.com"];
+app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
+const allowedOrigins = ["https://glxx-8-4q8s.onrender.com"];
 
 const corsOptions = {
   origin: function (origin, callback) {
