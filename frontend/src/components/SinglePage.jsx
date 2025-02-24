@@ -5,6 +5,8 @@ import { getImgUrl } from "../utils/getImgUrl";
 import Loading from "./Loading";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/features/cart/cartSlice";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+
 
 const SinglePage = () => {
   const dispatch = useDispatch();

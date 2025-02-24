@@ -11,7 +11,7 @@ const { verifyToken } = require("../middleware/verifytoken");
 const router = express.Router();
 router.post("/create-books", verifyToken, postBooks);
 router.post("/create-book", postBook);
-router.get("/", getAllBooks);
+router.get("/", (req,res)=>{console.log("hello")},getAllBooks);
 router.get("/:id", getABook);
 router.put("/edit/:id", verifyToken, updateABook);
 router.delete("/:id", verifyToken, deleteABook);
