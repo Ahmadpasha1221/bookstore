@@ -9,9 +9,10 @@ const userRouter = require("./router/user.router.js");
 const adminRoutes = require("./router/amin.route.js");
 env.config();
 app.use(express.json());
-const port = process.env.PORT || 8000;
-// app.use(cors({ origin: ["http://localhost:5173"], credentials: true }));
-const allowedOrigins = ["https://bookstore-kvq5.onrender.com"];
+const allowedOrigins = [
+  "https://bookstore-kvq5.onrender.com",
+  "http://localhost:5173",
+];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -21,10 +22,10 @@ const corsOptions = {
       callback(new Error("Not allowed by CORS"));
     }
   },
-  credentials: true, // If you need to include cookies or authentication
+  credentials: true, 
 };
-
 app.use(cors(corsOptions));
+
 // app.use("/auth", authRoutes);
 app.use("/api/auth", userRouter);
 app.use("/api/books", booksRouter);
