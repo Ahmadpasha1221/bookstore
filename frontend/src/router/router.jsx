@@ -10,7 +10,7 @@ import PrivateRoute from "./private/PrivateRoute";
 import Orders from "../pages/Orders";
 import AdminLogin from "../components/AdminLogin";
 import PrivateRouteForAdmin from "./private/PrivateRouteForAdmin";
-import DashboardLayout from "../pages/dashboard/dashboardLayout";
+import DashboardLayout from "../pages/dashboard/DashboardLayout";
 import ManageBooks from "../pages/dashboard/ManageBooks";
 import UpdateBook from "../pages/dashboard/UpdateBook";
 import AddBook from "../pages/dashboard/addbook/AddBook";
